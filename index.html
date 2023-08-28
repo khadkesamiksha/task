@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="room.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">Room Elements</h1>
+        <div id="loading-bar">
+            <div id="loading-progress"></div>
+        
+        <div class="main-content" id="app">
+            <!-- Elements will be displayed here -->
+        </div>
+        <div class="buttons">
+            <button id="shuffleButton">Shuffle</button>
+            <button id="downloadButton">Download</button>
+        </div>
+        <main id="roomcontainer" class="rooms-container">
+            <div>
+                <h2>Room 1</h2>
+               <div class="small-box"></div>
+               <ol class="girls-list">
+                <li class="girl"> Rohini neware</li>
+                <li class="girl"> Nikita sirsat</li>
+                <li class="girl"> vaishnavi chawhan</li>
+            </ol>
+            </div>
+            <div>
+              <h2>Room 2</h2>
+              <div class="small-box"></div>
+              <ol class="girls-list">
+          <li class="girl">  shital khadse</li>
+          <li class="girl">  yugandhara dange</li>
+          <li class="girl">  sakshi paraskar</li>
+              </ol>
+          </div>
+  
+            <div>
+            <h2>Room 3</h2>
+            <div class="small-box"></div>
+               <ol class="girls-list">
+        <li class="girl">  Nisha morudiye</li>
+        <li class="girl">  Nidhi bagde</li>
+        <li class="girl">  Amisha sarkate</li>
+        </ol>
+        </div>
+        <div>
+        <h2>Room 4</h2>
+        <div class="small-box"></div>
+        <ol class="girls-list">
+        <li class="girl">  Lina bhandarkar</li>
+        <li class="girl">  Pooja kolhe</li>
+        <li class="girl">  vaishnavi kakde</div>
+        </ol>
+        </div>
+        <div>
+        <h2>Room 5</h2>
+        <div class="small-box"></div>
+        <ol class="girls-list">
+        <li class="girl">  Vaishnavi bahade </li>
+        <li class="girl">  Gunjan rokade </li>
+        <li class="girl">  Priyanka dhomane </li>
+        </ol>
+        </div>
+        <div>
+        <h2>Room 6</h2>
+        <div class="small-box"></div>
+        <ol class="girls-list">
+        <li class="girl">  Samiksha khadke </li>
+        <li class="girl">  Shubhangi dhage</li>
+        <li class="girl">  Mansi sakhre</li>
+        </ol>
+        </div>
+        <div>
+        <h2>Room 7</h2>
+        <div class="small-box"></div>
+        <ol class="girls-list">
+        <li class="girl">  Mayuri amude </li>
+        <li class="girl">  Kalpana dhage</li>
+        <li class="girl">  Pragati dhawle</li>
+        </ol>
+        </div>
+        <div>
+        <h2>Room 8</h2>
+        <div class="small-box"></div>
+        <ol class="girls-list">
+        <li class="girl">  Prachih agalte </li>
+        <li class="girl">  Nikita pandav</li>
+        <li class="girl">  Tanvi gawande</li>
+        </ol>
+        </div>
+        <div>
+        <h2>Room 9</h2>
+        <div class="small-box"></div>
+        <ol class="girls-list">
+        <li class="girl">  papiya mohod</li>
+        <li class="girl">  Pragati dike</li>
+        <li class="girl">  Shweta jumle</li>
+        </ol>
+        </div>
+        <div>
+        <h2>Room 10</h2>
+        <div class="small-box"></div>
+        <ol class="girls-list">
+        <li class="girl">  Vishahka malewar</li>
+        <li class="girl">  Swati kapgate</li>
+        <li class="girl">  Kanchan shende</li>
+        </ol>
+        </div>
+        
+
+            <!-- Repeat the same structure for other rooms -->
+        </main>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const shuffleButton = document.getElementById("shuffleButton");
+
+            shuffleButton.addEventListener("click", function () {
+                const allGirls = Array.from(document.querySelectorAll(".girl"));
+
+                for (let i = allGirls.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [allGirls[i].textContent, allGirls[j].textContent] = [allGirls[j].textContent, allGirls[i].textContent];
+                }
+            });
+        });
+    </script>
+</body>
+</html>
